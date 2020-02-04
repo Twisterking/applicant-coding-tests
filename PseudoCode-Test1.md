@@ -156,6 +156,14 @@ dishes = [
   </details>
 </details>
 
+## Aufgabe 2 (Mittel)
+<details>
+  <summary>Ausklappen</summary>
+  
+  #### ??? TODO
+
+</details>
+
 ## Aufgabe 3 (schwer)
 <details>
   <summary>Ausklappen</summary>
