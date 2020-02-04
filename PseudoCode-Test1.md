@@ -221,31 +221,34 @@ dishes = [
   </priceCatalogue>
 </gastro:interchange>
 ```
-
 ## Pseudo Code:
 
-```js
-var DATA = parseXML(<gastro:interchange/>)
-var head = {}
-var items = []
+<details>
+  <summary>Schummeln ;)</summary>
+  
+  ```js
+  var DATA = parseXML(<gastro:interchange/>)
+  var head = {}
+  var items = []
 
-head.SENDER = DATA.interchangeHeader.interchangeSender.mailboxID
-head.RECIPIENT = DATA.interchangeHeader.interchangeRecipient.mailboxID
-head.NAME = DATA.interchangeHeader.interchangeIdentification.uniqueCreatorIdentification
-head.DATETIME = DATA.interchangeHeader.interchangeCreationDateTime
-head.SELLER = DATA.priceCatalogue.pricatPartyIdentification.seller.gln
-head.BUYER = DATA.priceCatalogue.pricatPartyIdentification.buyer.gln
+  head.SENDER = DATA.interchangeHeader.interchangeSender.mailboxID
+  head.RECIPIENT = DATA.interchangeHeader.interchangeRecipient.mailboxID
+  head.NAME = DATA.interchangeHeader.interchangeIdentification.uniqueCreatorIdentification
+  head.DATETIME = DATA.interchangeHeader.interchangeCreationDateTime
+  head.SELLER = DATA.priceCatalogue.pricatPartyIdentification.seller.gln
+  head.BUYER = DATA.priceCatalogue.pricatPartyIdentification.buyer.gln
 
-FOR EACH pricatLineItem IN DATA.priceCatalogue.pricatLineItems DO
-  ADD ITEM TO items WITH
-    STATUS = pricatLineItem.$.articleStatus AND
-    NUMBER = pricatLineItem.$.number AND
-    REF = pricatLineItem.tradeItemIdentification.additionalTradeItemIdentification.value AND
-    NAME = pricatLineItem.itemDescription.textLong AND
-    PRICE = pricatLineItem.priceInformation.listPrice.value AND
-    UNIT = pricatLineItem.packageInformation.packageType AND
-    ORIGIN = pricatLineItem.foodRegulationInformation.countryOfOrigin
-```
+  FOR EACH pricatLineItem IN DATA.priceCatalogue.pricatLineItems DO
+    ADD ITEM TO items WITH
+      STATUS = pricatLineItem.$.articleStatus AND
+      NUMBER = pricatLineItem.$.number AND
+      REF = pricatLineItem.tradeItemIdentification.additionalTradeItemIdentification.value AND
+      NAME = pricatLineItem.itemDescription.textLong AND
+      PRICE = pricatLineItem.priceInformation.listPrice.value AND
+      UNIT = pricatLineItem.packageInformation.packageType AND
+      ORIGIN = pricatLineItem.foodRegulationInformation.countryOfOrigin
+  ```
+</details>
 
 ## Output:
 
