@@ -46,7 +46,7 @@ new variable mainCourse
 starter.NAME = DATA.starter.dish.name
 starter.TIME = DATA.starter.$.time
 starter.STEPS = []
-FOR EACH step in DATA.starter.dish.steps DO
+FOR EACH step IN DATA.starter.dish.steps DO
   ADD STEP TO starter.STEPS WITH
     COUNT = step.count AND
     TEXT = step.$
@@ -54,7 +54,7 @@ FOR EACH step in DATA.starter.dish.steps DO
 mainCourse.NAME = DATA.mainCourse.dish.name
 mainCourse.TIME = DATA.mainCourse.$.time
 mainCourse.STEPS = []
-FOR EACH step in DATA.mainCourse.dish.STEPS DO
+FOR EACH step IN DATA.mainCourse.dish.STEPS DO
   ADD STEP TO mainCourse.steps WITH
     COUNT = step.count AND
     TEXT = step.$
@@ -318,7 +318,7 @@ dishes = [
   ```
   </details>
 
-  ## Output:
+  ## Gewünschter Output:
 
   ```js
   head = {
