@@ -113,7 +113,7 @@ dishes = [
   <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
   <myRecipe versionn="lisa-stangl">
     <starter time="13:00"/>
-      <name>Very fancy soup, but cangerous</name>
+      <name>Very fancy soup, but dangerous</name>
       <steps>
         <step count="1">Cook something something, this is a very long text.</step>
         <step count="2">Slice all the stuffs, maybe even cut some into dices - dices are fun!</step>
@@ -125,7 +125,9 @@ dishes = [
         <step count="">Maybe die in the process ...</step>
         <step count="6">If still alive, enjoy</step>
       </steps>
+      </myRecipe>
     </starter>
+    <step></step>
     <mainCourse time="12:50">
       <name>Old School Schweinsbraten</name>
       <steps>
@@ -142,8 +144,11 @@ dishes = [
   <details>
     <summary>Schummeln und Fehler auflisten:</summary>
   
+ * versionn
  * starter time ist VOR mainCourse
  * `<dish/>` Tag fehlt
+ * Zwischen starter und mainCourse ist ein zusätzlicher step
+ * myRecipe wird mitten drunter geschlossen
  * `<starter/>`:
    * starter Tag wird sofort wieder geschlossen (`<starter ...>` vs `<starter ... />`)
    * count fehlt bei step 5
@@ -151,6 +156,7 @@ dishes = [
  * `<mainCourse/>`:
    * bei allen steps fehlt count
    * step 2 hat falsche syntax
+   * step wird nach step2 2x geschlossen
    * mainCourse Tag wird niemals geschlossen
     
   </details>
