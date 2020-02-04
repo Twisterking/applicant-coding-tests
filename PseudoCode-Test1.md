@@ -101,7 +101,62 @@ dishes = [
 ]
 ```
 
-## Aufgabe 1
+## Aufgabe 1 (einfach)
+<details>
+  <summary>Ausklappen</summary>
+  
+  #### Finde die Fehler.
+  Folgende Input-XML ist ähnlich der oberen, hat aber Fehler! Findest du alle Fehler?
+  
+  ## Finde die Fehler
+  ```xml
+  <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <myRecipe versionn="lisa-stangl">
+    <starter time="13:00"/>
+      <name>Very fancy soup, but cangerous</name>
+      <steps>
+        <step count="1">Cook something something, this is a very long text.</step>
+        <step count="2">Slice all the stuffs, maybe even cut some into dices - dices are fun!</step>
+        <step count="3">Heat oil</step>
+        <step count="4">
+          Put water on it
+          <substep>Very bad idea!</substep>
+        </step>
+        <step count="">Maybe die in the process ...</step>
+        <step count="6">If still alive, enjoy</step>
+      </steps>
+    </starter>
+    <mainCourse time="12:50">
+      <name>Old School Schweinsbraten</name>
+      <steps>
+        <step>Prepare 'se meat and stuffs</step>
+        <step substep="Has to be proper Waldviertler Erdäpfelknödel!">Make some Knödels</step>
+        </step>
+        <step>Make the Schweinsbraten ... da</step>
+        <step>???</step>
+        <step>Serve and enjoy</step>
+      </steps>
+  </myRecipe>
+  ```
+  
+  <details>
+    <summary>Schummeln und Fehler auflisten:</summary>
+  
+ * starter time ist VOR mainCourse
+ * `<dish/>` Tag fehlt
+ * `<starter/>`:
+   * starter Tag wird sofort wieder geschlossen (`<starter ...>` vs `<starter ... />`)
+   * count fehlt bei step 5
+   * step 4 fehlt der `<main/>` Tag
+ * `<mainCourse/>`:
+   * bei allen steps fehlt count
+   * step 2 hat falsche syntax
+   * mainCourse Tag wird niemals geschlossen
+    
+  </details>
+</details>
+
+## Aufgabe 3 (schwer)
 <details>
   <summary>Ausklappen</summary>
 
