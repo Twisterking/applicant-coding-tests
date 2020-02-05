@@ -61,44 +61,38 @@ FOR EACH step IN DATA.mainCourse.dish.STEPS DO
     IF step.substep THEN
       TEXT = step.main AND
       SUBSTEP = step.substep
-
-new variable dishes
-ADD myStarterDish TO dishes
-ADD myMainCourseDish TO dishes
 ```
 
 ## Beispiel Output:
 
-#### Folgendes ist die Ausgabe von console.log(dishes) - also was ist der Inhalt der var "dishes" nach Ausführung von obigem Psuedo Code:
+#### Was ist nun der Inhalt der variablen "myStarterDish" und "myMainCourseDish" nach Ausführung von obigem Psuedo Code:
 
 ```js
-dishes = [
-  {
-    NAME: "Tomate Soup",
-    TIME: "12:30",
-    STEPS: [
-      { COUNT: 1, TEXT: "Slice tomatoes" },
-      { COUNT: 2, TEXT: "Slice vegetables" },
-      { COUNT: 3, TEXT: "Boil water" },
-      { COUNT: 4, TEXT: "Sauté vegetables, add tomatos later" },
-      { COUNT: 5, TEXT: "Deglaze with white wine" },
-      { COUNT: 6, TEXT: "Add water, let boil" },
-      { COUNT: 7, TEXT: "Add seasoning" },
-      { COUNT: 8, TEXT: "Enjoy" },
-    ]
-  },
-  {
-    NAME: "Wiener Schnitzel",
-    TIME: "13:15",
-    STEPS: [
-      { COUNT: 1, TEXT: "Beat the meat" },
-      { COUNT: 2, TEXT: "Bread the schnitzels", SUBSTEP: "mix flour and salt, add eggs, add breadcrumbs" },
-      { COUNT: 3, TEXT: "Heat oil in pan to 180 celsius" },
-      { COUNT: 4, TEXT: "Fry the schnitzels" },
-      { COUNT: 5, TEXT: "Serve and enjoy" },
-    ]
-  }
-]
+myStarterDish = {
+  NAME: "Tomate Soup",
+  TIME: "12:30",
+  STEPS: [
+    { COUNT: 1, TEXT: "Slice tomatoes" },
+    { COUNT: 2, TEXT: "Slice vegetables" },
+    { COUNT: 3, TEXT: "Boil water" },
+    { COUNT: 4, TEXT: "Sauté vegetables, add tomatos later" },
+    { COUNT: 5, TEXT: "Deglaze with white wine" },
+    { COUNT: 6, TEXT: "Add water, let boil" },
+    { COUNT: 7, TEXT: "Add seasoning" },
+    { COUNT: 8, TEXT: "Enjoy" },
+  ]
+}
+myMainCourseDish = {
+  NAME: "Wiener Schnitzel",
+  TIME: "13:15",
+  STEPS: [
+    { COUNT: 1, TEXT: "Beat the meat" },
+    { COUNT: 2, TEXT: "Bread the schnitzels", SUBSTEP: "mix flour and salt, add eggs, add breadcrumbs" },
+    { COUNT: 3, TEXT: "Heat oil in pan to 180 celsius" },
+    { COUNT: 4, TEXT: "Fry the schnitzels" },
+    { COUNT: 5, TEXT: "Serve and enjoy" },
+  ]
+}
 ```
 
 ## Aufgabe 1 (einfach)
