@@ -2,7 +2,7 @@
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<myRecipe version="lisa-stangl">
+<myRecipe version="orderlion">
   <starter time="12:30">
     <dish>
       <name>Tomato Soup</name>
@@ -111,7 +111,7 @@ dishes = [
   ## Finde die Fehler
   ```xml
   <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-  <myRecipe versionn="lisa-stangl">
+  <myRecipe versionn="orderlion">
     <starter time="13:00"/>
       <name>Very fancy soup, but dangerous</name>
       <steps>
