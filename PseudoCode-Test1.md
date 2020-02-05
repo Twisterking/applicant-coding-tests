@@ -40,22 +40,22 @@
 
 ```js
 new variable DATA = parseXML(<myRecipe/>)
-new variable starter
-new variable mainCourse
+new variable myStarterDish
+new variable myMainCourseDish
 
-starter.NAME = DATA.starter.dish.name
-starter.TIME = DATA.starter.$.time
-starter.STEPS = []
+myStarterDish.NAME = DATA.starter.dish.name
+myStarterDish.TIME = DATA.starter.$.time
+myStarterDish.STEPS = []
 FOR EACH step IN DATA.starter.dish.steps DO
-  ADD STEP TO starter.STEPS WITH
+  ADD STEP TO myStarterDish.STEPS WITH
     COUNT = step.count AND
     TEXT = step.$
 
-mainCourse.NAME = DATA.mainCourse.dish.name
-mainCourse.TIME = DATA.mainCourse.$.time
-mainCourse.STEPS = []
+myMainCourseDish.NAME = DATA.mainCourse.dish.name
+myMainCourseDish.TIME = DATA.mainCourse.$.time
+myMainCourseDish.STEPS = []
 FOR EACH step IN DATA.mainCourse.dish.STEPS DO
-  ADD STEP TO mainCourse.steps WITH
+  ADD STEP TO myMainCourseDish.steps WITH
     COUNT = step.count AND
     TEXT = step.$
     IF step.substep THEN
@@ -63,8 +63,8 @@ FOR EACH step IN DATA.mainCourse.dish.STEPS DO
       SUBSTEP = step.substep
 
 new variable dishes
-ADD starter TO dishes
-ADD mainCourse TO dishes
+ADD myStarterDish TO dishes
+ADD myMainCourseDish TO dishes
 ```
 
 ## Beispiel Output:
@@ -162,15 +162,7 @@ dishes = [
   </details>
 </details>
 
-## Aufgabe 2 (Mittel)
-<details>
-  <summary>Ausklappen</summary>
-  
-  #### ??? TODO
-
-</details>
-
-## Aufgabe 3 (schwer)
+## Aufgabe 2 (schwer)
 <details>
   <summary>Ausklappen</summary>
 
