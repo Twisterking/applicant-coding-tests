@@ -226,8 +226,8 @@ myMainCourseDish = {
         <pricatLineItem articleStatus="CHANGED" number="199" validityStartDate="2019-12-13">
           <tradeItemIdentification>
             <additionalTradeItemIdentification>
-              <additionalTradeItemIdentificationValue>3862</additionalTradeItemIdentificationValue>
-              <additionalTradeItemIdentificationType>SUPPLIER_ASSIGNED</additionalTradeItemIdentificationType>
+              <value>3862</value>
+              <type>SUPPLIER_ASSIGNED</type>
             </additionalTradeItemIdentification>
           </tradeItemIdentification>
           <itemDescription>
